@@ -1,5 +1,3 @@
-import java.util.Random;
-
 public class Personagem {
     // variáveis de instância(objeto)
     String nome;
@@ -66,6 +64,11 @@ public class Personagem {
         } else {
             System.out.printf("%s sem sono...\n", nome);
         }
+    }
+
+    Boolean morreu(){
+        if(energia<=0)return true;
+        return false;
     }
 
     public String toString() {
