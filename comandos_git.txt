@@ -21,3 +21,26 @@ git config --local code.editor "code --wait"
 
 git commit 
     realiza o commit das criação do README.md
+
+git add Personagem.java
+    adicionou as mudanças do Personagem para o commit
+
+git commit
+    realizou o commit "feat(p1): inclui nome ao construtor do personagem" das mudanças do Personagem
+
+git add Jogo.java
+    adicionou um arquivo de teste para os personagens
+
+git commit
+    realizou o commit "test(p1): testa personagens criados"
+
+git log
+    realiza a leitura do histórico dos  commits 
+
+git add Personagem.java
+    adicionou o metódo "morreu" para o Personagem
+
+git commit
+    realizou o commit "feat(p1): viabiliza morte do personagem"
+
+git

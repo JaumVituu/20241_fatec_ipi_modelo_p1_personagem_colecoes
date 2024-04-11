@@ -1,9 +1,11 @@
+import java.util.Random;
 public class Personagem {
     // variáveis de instância(objeto)
     String nome;
     int energia;
     private int fome;
     private int sono;
+    VetorDinamico itens = new VetorDinamico();
 
     // esse é o construtor padrão
     // criado automaticamente pelo compilador, ainda que não seja escrito
@@ -25,8 +27,12 @@ public class Personagem {
             this.fome = fome;
         if (sono >= 0 && sono <= 10)
             this.sono = sono;
+        
     }
 
+    void adicionarItem(String item) {
+        itens.adicionar(item);
+    }
     void cacar() {
         if (energia >= 2) {
             System.out.printf("%s esta cacando...\n", nome);
@@ -72,6 +78,7 @@ public class Personagem {
     }
 
     public String toString() {
+        var sb = new StringBuilder();
         return String.format(
                 "%s: (e:%d, f:%d, s:%d)",
                 nome, energia, fome, sono);
