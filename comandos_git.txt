@@ -1,0 +1,23 @@
+git clone                                           
+    Clona repositório da web
+
+git add README.md                                   
+    Adiciona README.md para o commit
+
+git config --local user.name "João Vitor dos Santos"
+    Muda o nome nas configurações locais do repositório
+
+git config --local user.email vitor40joao@gmail.com               
+    Muda o email nas configurações locais do repositório
+
+git remote remove origin                            
+    Remove a referência antiga da origem nas configurações do repositório
+
+git remote add origin 
+    Adiciona o token referente ao repositório da atividade
+
+git config --local code.editor "code --wait"
+    Ordena o vscode a aguardar pela mensagem de commit
+
+git commit 
+    realiza o commit das criação do README.md
