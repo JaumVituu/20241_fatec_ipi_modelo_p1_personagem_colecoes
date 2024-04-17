@@ -154,3 +154,12 @@ git add comandos_git.txt
 
 git commit
     efetua o commit "docs(p1): finaliza alteracoes no arquivo de comandos"
+
+git add comandos_git.txt
+    adiciona este arquivo ao commit
+
+git commit
+    efetua o commit "fix(p1): adiciona ultimo push para o arquvivo de comandos"
+
+git push origin main --tags
+    envia os commits realizados na branch main para o repositório localizado em origin
