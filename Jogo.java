@@ -9,7 +9,7 @@ public class Jogo {
         System.out.println(p1);
         
         while(!p1.morreu()){
-            oQueFazer = gerador.nextInt(2);
+            oQueFazer = gerador.nextInt(3);
             switch(oQueFazer){
                 case 0:
                     p1.comer();
