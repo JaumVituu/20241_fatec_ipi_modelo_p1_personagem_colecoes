@@ -49,6 +49,9 @@ git add Personagem.java
 git commit
     realizou o commit "feat(p1): viabiliza morte do personagem"
 
+git tag v1.0.0 414caa2f2ab7 -m "jogo: torna a morte do personagem real"
+    atribui uma tag para o commit endereçado, tornando ele numa release
+
 git add . 
     adicionou todos os arquivos modificados para o próximo commit
 
@@ -136,3 +139,18 @@ git add .
 
 git commit 
     efetua o commmit "fix(p1): retira acentos de textos do arquivo Personagem"
+
+git add .
+    adiciona todos os arquivos modificados ao commit
+
+git commit
+    efetua o commit "feat(p1): implementa batalha entre personagens"
+
+git tag v2.0.0  5c40f67e5af420d -m "jogo: implementa sobrevivencia heroica mas, no final, todos morrem"
+    atribui uma tag para o commit referênciado, com uma mensagem, sinalizando uma release.
+
+git add comandos_git.txt
+    adiciona este arquivo ao commit
+
+git commit
+    efetua o commit "docs(p1): finaliza alteracoes no arquivo de comandos"
