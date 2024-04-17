@@ -50,7 +50,7 @@ public class Personagem {
             energia -= 2; // energia = energia - 2;
             adicionarItem();
         } else {
-            System.out.printf("%s sem energia para cacar...\n", nome);
+            System.out.printf("%s esta sem energia para cacar...\n", nome);
         }
         fome = Math.min(fome + 1, 10);
         // resolver com o ternário
@@ -65,14 +65,14 @@ public class Personagem {
         // so vai avisar que esta sem fome
         switch (fome) {
             case 0:
-                System.out.printf("%s sem fome....\n", nome);
+                System.out.printf("%s esta sem fome....\n", nome);
                 break;
             default:
                 if(itens.estaVazio()){
                     System.out.printf("%s não pode comer, pois não possui itens\n", nome);
                 }
                 else{
-                    System.out.printf("%s comendo...\n", nome);
+                    System.out.printf("%s esta comendo...\n", nome);
                     --fome;
                     energia = (energia == 10 ? energia : energia + 1);
                     itens.removerNoFinal();
@@ -86,11 +86,11 @@ public class Personagem {
             sono -= 1;
             energia = Math.min(energia + 1, 10);
         } else {
-            System.out.printf("%s sem sono...\n", nome);
+            System.out.printf("%s esta sem sono...\n", nome);
         }
     }
 
-    public Boolean morreu(){
+    Boolean morreu(){
         if(energia<=0)return true;
         return false;
     }
