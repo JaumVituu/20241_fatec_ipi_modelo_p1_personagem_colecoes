@@ -6,8 +6,9 @@ public class Jogo {
         var p1 = new Personagem("Cristiano Ronaldo", 10, 9, 0);
         var p2 = new Personagem("Lionel Messi", 8, 5, 5);
         int oQueFazer;
+        String campeao = new String();
         
-        while(!p1.morreu() && !p2.morreu()){
+        while(!p1.morreu() || !p2.morreu()){
             oQueFazer = gerador.nextInt(3);
             switch(oQueFazer){
                 case 0:
@@ -38,15 +39,22 @@ public class Jogo {
             System.out.println(p2);
             System.out.printf("\n\n-----------------------------\n\n");
 
+            if(campeao == null){
+                if(p1.morreu()){
+                    System.out.println(p1.nome + " morreu...");
+                    campeao = p2.nome;
+                    
+                }
+                if(p2.morreu()){
+                    System.out.println(p2.nome + " morreu...");
+                    campeao = p1.nome;
+                }
+                if(p1.morreu() || p2.morreu()){
+                    System.out.println(campeao + " foi o campeão!");
+                }   
+            }
+
             Thread.sleep(500);
         }
-        if(p1.morreu()){
-            System.out.println(p1.nome + " morreu...");
-            System.out.println(p2.nome + " foi o sobrevivente!");
-        }
-        else{
-            System.out.println(p2.nome + " morreu...");
-            System.out.println(p1.nome + " foi o sobrevivente!");
-        }   
     }
 }
