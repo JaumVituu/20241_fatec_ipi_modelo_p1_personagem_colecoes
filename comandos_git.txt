@@ -163,3 +163,6 @@ git commit
 
 git push origin main --tags
     envia os commits realizados na branch main para o repositório localizado em origin
+
+git commit -a -m "fix(p1): arruma funcao removerNoFinal no VetorDinamico"
+    realiza o commit das mudanças especificadas
