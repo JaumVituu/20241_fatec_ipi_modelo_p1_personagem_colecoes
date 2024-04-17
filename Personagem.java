@@ -3,7 +3,7 @@ import java.util.Random;
 public class Personagem {
     // variáveis de instância(objeto)
     String nome;
-    int energia;
+    private int energia;
     private int fome;
     private int sono;
     final String itensPossiveis [] = {"Javali selvagem", "amora", "batata frita", "onça", "bola de ouro"};
@@ -93,6 +93,15 @@ public class Personagem {
     Boolean morreu(){
         if(energia<=0)return true;
         return false;
+    }
+
+    void receberAtaque(){
+        energia--;
+    }
+
+    void atacar(Personagem inimigo){
+        System.out.println("\n" + nome + " atacou " + inimigo.nome + "...\n");
+        inimigo.receberAtaque();
     }
 
     public String toString() {

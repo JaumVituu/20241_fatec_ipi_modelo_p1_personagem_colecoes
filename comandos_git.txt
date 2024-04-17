@@ -130,3 +130,9 @@ git commit
 git reset --hard f8a25725644e40
     retira as modificações aplicadas no commit anterior, devido a erro de gramatica na mensagem
 
+
+git add .
+    adiciona todos os arquivos modificados ao commit
+
+git commit 
+    efetua o commmit "fix(p1): retira acentos de textos do arquivo Personagem"
