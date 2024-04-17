@@ -17,10 +17,9 @@ public class Personagem {
         energia = 10;
         fome = 0;
         sono = 0;
-
-        var gerador = new Random();
+        
         for(int i = 0; i < 4; i++){
-            adicionarItem(itensPossiveis[gerador.nextInt(5)]);
+            adicionarItem();
         }
     }
 
@@ -34,17 +33,22 @@ public class Personagem {
             this.fome = fome;
         if (sono >= 0 && sono <= 10)
             this.sono = sono;
-        
+
+        for(int i = 0; i < 4; i++){
+            adicionarItem();
+        }
     }
 
-    void adicionarItem(String item) {
-        itens.adicionar(item);
+    void adicionarItem() {
+        var gerador = new Random();
+        itens.adicionar(itensPossiveis[gerador.nextInt(5)]);
     }
 
     void cacar() {
         if (energia >= 2) {
             System.out.printf("%s esta cacando...\n", nome);
             energia -= 2; // energia = energia - 2;
+            adicionarItem();
         } else {
             System.out.printf("%s sem energia para cacar...\n", nome);
         }
@@ -91,6 +95,10 @@ public class Personagem {
         sb.append(": (e:").append(energia);
         sb.append(", f:").append(fome);
         sb.append(", s:").append(sono).append(")");
+        sb.append("\nItens: ");
+        for(String item : itens.getElementos()){
+            sb.append("|").append(item).append("|");
+        }
         return sb.toString();
         // return String.format(
         //         "%s: (e:%d, f:%d, s:%d)",
