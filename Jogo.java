@@ -9,52 +9,58 @@ public class Jogo {
         String campeao = new String();
         
         while(!p1.morreu() || !p2.morreu()){
-            oQueFazer = gerador.nextInt(3);
-            switch(oQueFazer){
-                case 0:
-                    p1.comer();
-                    break;
-                case 1:
-                    p1.cacar();
-                    break;
-                default:
-                    p1.dormir();
-                    break;
-            }
-            System.out.println(p1);
-            System.out.printf("\n");
-
-            oQueFazer = gerador.nextInt(3);
-            switch(oQueFazer){
-                case 0:
-                    p2.comer();
-                    break;
-                case 1:
-                    p2.cacar();
-                    break;
-                default:
-                    p2.dormir();
-                    break;
-            }
-            System.out.println(p2);
-            System.out.printf("\n\n-----------------------------\n\n");
-
-            if(campeao == null){
-                if(p1.morreu()){
-                    System.out.println(p1.nome + " morreu...");
-                    campeao = p2.nome;
-                    
+            if(!p1.morreu()){
+                oQueFazer = gerador.nextInt(3);
+                switch(oQueFazer){
+                    case 0:
+                        p1.comer();
+                        break;
+                    case 1:
+                        p1.cacar();
+                        break;
+                    default:
+                        p1.dormir();
+                        break;
                 }
-                if(p2.morreu()){
-                    System.out.println(p2.nome + " morreu...");
+                System.out.println(p1);
+                System.out.printf("\n");
+            }
+            
+            if(!p2.morreu()){
+                oQueFazer = gerador.nextInt(3);
+                switch(oQueFazer){
+                    case 0:
+                        p2.comer();
+                        break;
+                    case 1:
+                        p2.cacar();
+                        break;
+                    default:
+                        p2.dormir();
+                        break;
+                }
+                System.out.println(p2);
+            }
+            
+            if (campeao.isEmpty()){
+                if(p2.morreu() && !p1.morreu()){
                     campeao = p1.nome;
+                    System.out.println("\n" + p2.nome + " morreu... " + campeao + " se tornou o campeao!\n");
                 }
-                if(p1.morreu() || p2.morreu()){
-                    System.out.println(campeao + " foi o campeão!");
-                }   
+                else if(p1.morreu() && !p2.morreu()){
+                    campeao = p2.nome;
+                    System.out.println("\n" + p1.nome + " morreu... " + campeao + " se tornou o campeao!\n");
+                }
+                else{
+                    System.out.println("...Ocorreu um empate????");
+                }
+                
             }
 
-            Thread.sleep(500);
+            System.out.printf("\n\n-----------------------------\n\n");
+            Thread.sleep(1000);
         }
+        if(!campeao.isEmpty())
+            System.out.printf("O campeao, %s, morreu.\n\nFim de jogo.",campeao);
     }
 }
