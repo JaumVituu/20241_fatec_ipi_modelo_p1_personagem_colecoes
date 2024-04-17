@@ -69,7 +69,7 @@ public class Personagem {
                 break;
             default:
                 if(itens.estaVazio()){
-                    System.out.printf("%s não pode comer, pois não possui itens\n", nome);
+                    System.out.printf("%s nao pode comer, pois nao possui itens\n", nome);
                 }
                 else{
                     System.out.printf("%s esta comendo...\n", nome);

@@ -67,8 +67,8 @@ git remote remove origin
 git remote add origin
     adiciona uma nova origem, com um token novo
 
-git push
-    envia os commits realizados para o repositório
+git push origin main
+    envia os commits realizados na branch main para o repositório localizado em origin
 
 git add .
     adiciona todos os arquivos modificados para o próximo commit
@@ -87,3 +87,46 @@ git add Jogo.java
 
 git commit
     efetua o commit "fix(p1): arruma valor obtido na variavel oQueFazer", onde os valores obtidos iam de 0 a 1, e não de 0 a 2
+
+git add .
+    adiciona todos os arquivos modificados ao commit
+
+git commit
+    efetua o commit "feat(p1): condiciona refeicao a existencia de itens"
+
+git add Personagem.java
+    adiciona o arquivo Personagem.java ao commit
+
+git commit
+    efetua o commit "fix(p1): arruma prints de acoes do personagem"
+
+git add Jogo.java
+    adiciona o arquivo Jogo.java ao commit
+
+clear 
+    limpa a tela do prompt 
+
+git add Jogo.java
+    adiciona o arquivo Jogo.java ao commit
+
+git commit
+    efetua o commmit "fix(p1): condiciona jogo a vida dos dois personagens"
+
+git push origin main
+    envia os commits realizados na branch main para o repositório localizado em origin
+
+git add Jogo.java
+    adiciona o arquivo Jogo.java ao commit
+
+git commit
+    efetua o commit "fix(p1): faz texto de morte ser emitido somente uma vez por personagem"
+
+git add Personagem.java
+    adiciona o arquivo Personagem.java ao commit
+
+git commit 
+    efetua o commmit "fix(p1): retira acentos de textox do arquivo Personagem"
+
+git reset --hard f8a25725644e40
+    retira as modificações aplicadas no commit anterior, devido a erro de gramatica na mensagem
+
