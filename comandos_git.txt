@@ -71,7 +71,19 @@ git push
     envia os commits realizados para o repositório
 
 git add .
-    adicionou todos os arquivos modificados para o próximo commit
+    adiciona todos os arquivos modificados para o próximo commit
 
 git commit 
-    
+    efetua o commit "feat(p1): possibilita print de itens do personagem"
+
+git add ./VetorDinamico.java
+    adiciona o arquivo VetorDinamico.java ao commit
+
+git commit
+    efetua o commit "fix(p1): corrige o vetor obtido em getElementos", onde os espaços em branco no vetor eram obtidos também 
+
+git add Jogo.java
+    adiciona o arquivo Jogo.java ao commit
+
+git commit
+    efetua o commit "fix(p1): arruma valor obtido na variavel oQueFazer", onde os valores obtidos iam de 0 a 1, e não de 0 a 2

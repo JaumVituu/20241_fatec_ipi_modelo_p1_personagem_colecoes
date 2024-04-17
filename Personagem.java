@@ -17,7 +17,7 @@ public class Personagem {
         energia = 10;
         fome = 0;
         sono = 0;
-        
+
         for(int i = 0; i < 4; i++){
             adicionarItem();
         }
@@ -68,9 +68,15 @@ public class Personagem {
                 System.out.printf("%s sem fome....\n", nome);
                 break;
             default:
-                System.out.printf("%s comendo...\n", nome);
-                --fome;
-                energia = (energia == 10 ? energia : energia + 1);
+                if(itens.estaVazio()){
+                    System.out.printf("%s não pode comer, pois não possui itens\n", nome);
+                }
+                else{
+                    System.out.printf("%s comendo...\n", nome);
+                    --fome;
+                    energia = (energia == 10 ? energia : energia + 1);
+                    itens.removerNoFinal();
+                }    
         }
     }
 
@@ -84,7 +90,7 @@ public class Personagem {
         }
     }
 
-    Boolean morreu(){
+    public Boolean morreu(){
         if(energia<=0)return true;
         return false;
     }

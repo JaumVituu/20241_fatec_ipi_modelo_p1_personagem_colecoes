@@ -5,8 +5,6 @@ public class Jogo {
         var gerador = new Random();
         var p1 = new Personagem("Cristiano Ronaldo", 10, 9, 0);
         int oQueFazer;
-
-        System.out.println(p1);
         
         while(!p1.morreu()){
             oQueFazer = gerador.nextInt(3);
@@ -23,7 +21,7 @@ public class Jogo {
             }
             System.out.println(p1);
             System.out.printf("\n");
-            Thread.sleep(3000);
+            Thread.sleep(1000);
         }
 
         if(p1.morreu()){
