@@ -166,3 +166,6 @@ git push origin main --tags
 
 git commit -a -m "fix(p1): arruma funcao removerNoFinal no VetorDinamico"
     realiza o commit das mudanças especificadas
+
+git commit -a -m "fix(p1): arruma removerNoFinal novamente no VetorDinamico"
+    realiza o commit das mudanças especificadas
