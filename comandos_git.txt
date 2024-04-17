@@ -20,7 +20,13 @@ git config --local code.editor "code --wait"
     Ordena o vscode a aguardar pela mensagem de commit
 
 git commit 
-    realiza o commit das criação do README.md
+    realiza o commit da criação do README.md
+
+git add comandos_git.txt
+    adiciona o arquivo de comandos para o commit
+
+git commit 
+    Realiza o commit docs(p1):cria arquivo para comandos git
 
 git add Personagem.java
     adicionou as mudanças do Personagem para o commit
@@ -43,4 +49,8 @@ git add Personagem.java
 git commit
     realizou o commit "feat(p1): viabiliza morte do personagem"
 
-git
+git add . 
+    adicionou todos os arquivos modificados para o próximo commit
+
+git commit
+    realizou o commmit "feat(p1): implementa armazenamento de itens"

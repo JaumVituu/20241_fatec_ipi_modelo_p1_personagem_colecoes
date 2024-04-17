@@ -1,10 +1,12 @@
 import java.util.Random;
+
 public class Personagem {
     // variáveis de instância(objeto)
     String nome;
     int energia;
     private int fome;
     private int sono;
+    final String itensPossiveis [] = {"Javali selvagem", "amora", "batata frita", "onça", "bola de ouro"};
     VetorDinamico itens = new VetorDinamico();
 
     // esse é o construtor padrão
@@ -15,6 +17,11 @@ public class Personagem {
         energia = 10;
         fome = 0;
         sono = 0;
+
+        var gerador = new Random();
+        for(int i = 0; i < 4; i++){
+            adicionarItem(itensPossiveis[gerador.nextInt(5)]);
+        }
     }
 
     // construtor personalizado
@@ -33,6 +40,7 @@ public class Personagem {
     void adicionarItem(String item) {
         itens.adicionar(item);
     }
+
     void cacar() {
         if (energia >= 2) {
             System.out.printf("%s esta cacando...\n", nome);
@@ -78,9 +86,14 @@ public class Personagem {
     }
 
     public String toString() {
-        var sb = new StringBuilder();
-        return String.format(
-                "%s: (e:%d, f:%d, s:%d)",
-                nome, energia, fome, sono);
+        var sb = new StringBuilder("");
+        sb.append(nome);
+        sb.append(": (e:").append(energia);
+        sb.append(", f:").append(fome);
+        sb.append(", s:").append(sono).append(")");
+        return sb.toString();
+        // return String.format(
+        //         "%s: (e:%d, f:%d, s:%d)",
+        //         nome, energia, fome, sono);
     }
 }
