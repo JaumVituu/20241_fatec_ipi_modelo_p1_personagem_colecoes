@@ -101,7 +101,7 @@ public class VetorDinamico {
     }
 
     String[] getElementos() {
-        return Arrays.copyOf(elementos, cap);
+        return Arrays.copyOf(elementos, qtde);
         //return elementos;
     }
 
