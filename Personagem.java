@@ -119,4 +119,5 @@ public class Personagem {
         //         "%s: (e:%d, f:%d, s:%d)",
         //         nome, energia, fome, sono);
     }
+
 }

@@ -76,7 +76,7 @@ public class VetorDinamico {
     void removerNoFinal() {
         if(!estaVazio()){
             qtde--;
-            if(estaUmQuartoCheio()){
+            if(!estaVazio() && estaUmQuartoCheio()){
                 reduzirTamanho();
             }
         }

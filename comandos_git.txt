@@ -169,3 +169,9 @@ git commit -a -m "fix(p1): arruma funcao removerNoFinal no VetorDinamico"
 
 git commit -a -m "fix(p1): arruma removerNoFinal novamente no VetorDinamico"
     realiza o commit das mudanças especificadas
+
+git add .
+    adiciona todos os códigos modificados ao commit
+
+git commit -a -m "fix(p1): arruma reajuste de capacidade ao remover no final"
+    realiza o commit das mudanças especificadas
