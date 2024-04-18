@@ -6,9 +6,12 @@ public class Jogo {
         var p1 = new Personagem("Cristiano Ronaldo", 10, 9, 0);
         var p2 = new Personagem("Lionel Messi", 8, 5, 5);
         int oQueFazer;
+        int contDias = 0;
         String campeao = new String();
         
         while(!p1.morreu() || !p2.morreu()){
+            contDias++;
+            System.out.println("\nDia atual: " + contDias + "\n");
             oQueFazer = gerador.nextInt(2);
             if(!p1.morreu() && !p2.morreu()){
                 if(oQueFazer == 0)
@@ -66,7 +69,7 @@ public class Jogo {
             }
 
             System.out.printf("\n\n-----------------------------\n\n");
-            Thread.sleep(2000);
+            Thread.sleep(3000);
         }
         if(!campeao.isEmpty())
             System.out.printf("O campeao, %s, morreu.\n\nFim de jogo.",campeao);
